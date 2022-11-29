@@ -1,16 +1,12 @@
 # notify
 
-A new Flutter project.
+Notify Application GitHub Repo
 
-## Getting Started
+## Application features
 
-This project is a starting point for a Flutter application.
+- create notification to remind users to do
+- manage notification as ‘later’ ‘important’ ‘quick’
+- see how many notification has totally send
 
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+UI/UX Design 
+- [figma ui/ux design](https://www.figma.com/file/px1xPgjl1Ulpn4AAg7DCJC/Notify?node-id=0%3A1&t=LiCJiYFnnZuY0ebo-0)
