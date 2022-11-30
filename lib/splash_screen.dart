@@ -1,18 +1,17 @@
-import 'package:animated_text_kit/animated_text_kit.dart';
-import 'package:animations/animations.dart';
 import 'package:flutter/material.dart';
 import 'dart:async';
 
 import 'package:notify/core/constants.dart';
-import 'package:notify/main.dart';
-import 'package:notify/view/home/home.dart';
+import 'package:notify/view/onboard/onboard.dart';
 
-class SecondPage extends StatefulWidget {
+class SplashScreen extends StatefulWidget {
+  const SplashScreen({super.key});
+
   @override
-  _SecondPageState createState() => _SecondPageState();
+  _SplashScreenState createState() => _SplashScreenState();
 }
 
-class _SecondPageState extends State<SecondPage> {
+class _SplashScreenState extends State<SplashScreen> {
   @override
   void initState() {
     super.initState();
@@ -33,9 +32,7 @@ class _SecondPageState extends State<SecondPage> {
       });
     });
     Timer(const Duration(milliseconds: 1700), () {
-      setState(() {
-        _e = true;
-      });
+      setState(() {});
     });
     Timer(const Duration(milliseconds: 3400), () {
       setState(() {
@@ -45,8 +42,8 @@ class _SecondPageState extends State<SecondPage> {
     Timer(const Duration(milliseconds: 3850), () {
       setState(() {
         Navigator.of(context).pushReplacement(
-          ThisIsFadeRoute(
-            route: const HomePage(),
+          FadeRoute(
+            route: const OnBoard(),
           ),
         );
       });
@@ -57,7 +54,6 @@ class _SecondPageState extends State<SecondPage> {
   bool _b = false;
   bool _c = false;
   bool _d = false;
-  bool _e = false;
 
   @override
   void dispose() {
@@ -66,8 +62,8 @@ class _SecondPageState extends State<SecondPage> {
 
   @override
   Widget build(BuildContext context) {
-    double _h = MediaQuery.of(context).size.height;
-    double _w = MediaQuery.of(context).size.width;
+    double height = MediaQuery.of(context).size.height;
+    double width = MediaQuery.of(context).size.width;
     return Scaffold(
       backgroundColor: AppThemeColors.backgroundColor,
       body: Center(
@@ -79,7 +75,7 @@ class _SecondPageState extends State<SecondPage> {
               height: _d
                   ? 0
                   : _a
-                      ? _h / 2
+                      ? height / 2
                       : 20,
               width: 20,
               // color: Colors.deepPurpleAccent,
@@ -93,26 +89,26 @@ class _SecondPageState extends State<SecondPage> {
                           : 0),
               curve: Curves.fastLinearToSlowEaseIn,
               height: _d
-                  ? _h
+                  ? height
                   : _c
                       ? 80
                       : 20,
               width: _d
-                  ? _w
+                  ? width
                   : _c
                       ? 200
                       : 20,
               decoration: BoxDecoration(
-                  color:
-                      _b ? Colors.transparent : Colors.transparent,
+                  color: _b ? Colors.transparent : Colors.transparent,
                   // shape: _c? BoxShape.rectangle : BoxShape.circle,
-                  borderRadius:
-                      _d ? const BorderRadius.only() : BorderRadius.circular(30)),
+                  borderRadius: _d
+                      ? const BorderRadius.only()
+                      : BorderRadius.circular(30)),
               child: Center(
                 child: Image.asset(
-                        appIcon,
-                        color: Colors.white,
-                      ),
+                  appIcon,
+                  color: Colors.white,
+                ),
               ),
             ),
           ],
@@ -122,11 +118,11 @@ class _SecondPageState extends State<SecondPage> {
   }
 }
 
-class ThisIsFadeRoute extends PageRouteBuilder {
+class FadeRoute extends PageRouteBuilder {
   final Widget? page;
   final Widget route;
 
-  ThisIsFadeRoute({this.page, required this.route})
+  FadeRoute({this.page, required this.route})
       : super(
           pageBuilder: (
             BuildContext context,
