@@ -3,6 +3,7 @@ import 'package:flutter/services.dart';
 import 'package:notify/core/constants.dart';
 import 'package:notify/splash_screen.dart';
 import 'package:notify/view_model/auth/password_notifier.dart';
+import 'package:notify/view_model/auth/realtime_text_update.dart';
 import 'package:provider/provider.dart';
 
 void main() {
@@ -24,6 +25,9 @@ class MyApp extends StatelessWidget {
       providers: [
         ChangeNotifierProvider(
           create: (context) => PasswordNotifier(),
+        ),
+        ChangeNotifierProvider(
+          create: (context) => RealTimeTextUpdateProvider(),
         )
       ],
       child: MaterialApp(
