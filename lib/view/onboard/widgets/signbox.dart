@@ -19,7 +19,7 @@ class SignBox extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       margin: const EdgeInsets.only(left: 30, right: 30, bottom: 20, top: 20),
-      height: 140,
+      height: 150,
       decoration: boxDecoration,
       child: InkWell(
         borderRadius: BorderRadius.circular(15),
