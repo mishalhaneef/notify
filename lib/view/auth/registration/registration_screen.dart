@@ -13,13 +13,29 @@ class RegistrationScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+        resizeToAvoidBottomInset: false,
         backgroundColor: AppThemeColors.backgroundColor,
         body: SafeArea(
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceAround,
             children: [
-              const HeadNotifyText(
-                  head: 'Hey, Bud :)', secondaryText: 'Welcome to Notify!'),
+              Row(
+                children: [
+                  IconButton(
+                    onPressed: () => Navigator.pop(context),
+                    icon: const Icon(
+                      CupertinoIcons.back,
+                      color: AppThemeColors.secondaryColor,
+                    ),
+                  ),
+                  const HeadNotifyText(
+                    head: 'Hey, Bud :)',
+                    secondaryText: 'Welcome to Notify!',
+                    padding: EdgeInsets.only(
+                        left: 10, right: 30, bottom: 30, top: 30),
+                  ),
+                ],
+              ),
               Column(
                 children: const [
                   NotifyTextField(icon: Icons.person, hint: 'Username'),

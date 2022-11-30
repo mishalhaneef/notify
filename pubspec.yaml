@@ -31,11 +31,11 @@ environment:
 dependencies:
   animated_text_kit: ^4.2.2
   animations: ^2.0.7
-  # animator: ^3.2.0
-  provider: ^6.0.4
   cupertino_icons: ^1.0.2
   flutter:
     sdk: flutter
+  page_transition: ^2.0.9
+  provider: ^6.0.4
 
 dev_dependencies:
   flutter_lints: ^2.0.0
