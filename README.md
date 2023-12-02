@@ -1,24 +1,44 @@
-# notify
+# Notify Application
 
-Notify Application GitHub Repo
+## GitHub Repository
 
-## Application features
+Welcome to the GitHub repository for the Notify Application – a powerful notification management system.
 
-- create notification to remind users to do
-- manage notification as ‘later’ ‘important’ ‘quick’
-- see how many notification has totally send
-- user can login/register with email and password
-- user can select any avatar on their preferences
-- user can create notification
-- crud operations
-- user can mark it as daily reminder to remind them everyday
-- user can mark it as important so the notification will act deferent
-- user can also create notification from old notifications that user already created
-- user can manage all notification, that he created before and also on going from managing screen
-- user can hold on created notification that marked as done
-- notification will automatically clear from home screen after one day
-- user can arrange and manage daily reminders
-- the app is running on a limited notification count and storage so user can purchase premium version of this app and get these all unlimited plus user can enjoy ad free services
+## Application Features
 
-UI/UX Design 
-- [figma ui/ux design](https://www.figma.com/file/px1xPgjl1Ulpn4AAg7DCJC/Notify?node-id=0%3A1&t=LiCJiYFnnZuY0ebo-0)
+- Create notifications for timely reminders.
+- Efficiently manage notifications as 'later,' 'important,' and 'quick.'
+- Track the total number of notifications sent.
+- User authentication via email and password.
+- Personalize user experience with avatar selection.
+- CRUD operations for seamless notification management.
+- Mark notifications as daily reminders or important for distinct handling.
+- Create new notifications from existing ones.
+- Comprehensive management of past and ongoing notifications.
+- Archive completed notifications.
+- Automatic clearing of notifications after one day.
+- Arrange and manage daily reminders effortlessly.
+- Premium version for unlimited features and an ad-free experience.
+
+## UI/UX Design
+
+Explore the thoughtfully crafted UI/UX design on [Figma](https://www.figma.com/file/px1xPgjl1Ulpn4AAg7DCJC/Notify?node-id=0%3A1&t=LiCJiYFnnZuY0ebo-0).
+
+## Contribution
+
+This project is ongoing, and we welcome contributions to enhance its features and functionality. Feel free to open issues or submit pull requests.
+
+## How to Run the Project
+
+To run the project locally, follow these steps:
+
+1. Clone the repository: `git clone <repository_url>`
+2. Navigate to the project directory: `cd notify`
+3. Install dependencies: `flutter pub get`
+4. Run the app: `flutter run`
+
+## Premium Version
+
+The app runs on a limited notification count and storage. Users can opt for the premium version to enjoy unlimited features and an ad-free experience.
+
+Feel free to explore, contribute, and make Notify even more powerful!
