@@ -12,7 +12,7 @@ class RegistrationScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
         resizeToAvoidBottomInset: false,
         backgroundColor: AppThemeColors.backgroundColor,
         body: SafeArea(
@@ -21,14 +21,14 @@ class RegistrationScreen extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  IconButton(
-                    onPressed: () => Navigator.pop(context),
-                    icon: const Icon(
-                      CupertinoIcons.back,
-                      color: AppThemeColors.secondaryColor,
-                    ),
-                  ),
-                  const HeadNotifyText(
+                  // IconButton(
+                  //   onPressed: () => Navigator.pop(context),
+                  //   icon: const Icon(
+                  //     CupertinoIcons.back,
+                  //     color: AppThemeColors.secondaryColor,
+                  //   ),
+                  // ),
+                  HeadNotifyText(
                     head: 'Hey, Bud :)',
                     secondaryText: 'Welcome to Notify!',
                     padding: EdgeInsets.only(
@@ -37,7 +37,7 @@ class RegistrationScreen extends StatelessWidget {
                 ],
               ),
               Column(
-                children: const [
+                children: [
                   NotifyTextField(icon: Icons.person, hint: 'Username'),
                   NotifyTextField(icon: Icons.email, hint: 'email'),
                   NotifyTextField(
@@ -45,22 +45,22 @@ class RegistrationScreen extends StatelessWidget {
                     hint: 'Career Status (Student, Engineer...)',
                   ),
                   NotifyTextField(
-                    icon: Icons.password_rounded,
+                    icon: Icons.padding,
                     hint: 'password',
                     isPassword: true,
                   ),
                 ],
               ),
-              const ChooseAvatar(),
-              const SizedBox(height: 10),
+              ChooseAvatar(),
+              SizedBox(height: 10),
               Column(
-                children: const [
+                children: [
                   CustomButton(),
                   SizedBox(height: 10),
                   DirectToDeferentSignMethod()
                 ],
               ),
-              const SizedBox(),
+              SizedBox(),
             ],
           ),
         ));

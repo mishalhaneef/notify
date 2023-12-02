@@ -6,7 +6,6 @@ import 'package:notify/view/auth/login/login_screen.dart';
 import 'package:notify/view/auth/registration/registration_screen.dart';
 import 'package:notify/view/onboard/widgets/signbox.dart';
 import 'package:notify/view/widgets/notify_head_text.dart';
-import 'package:page_transition/page_transition.dart';
 
 class OnBoard extends StatelessWidget {
   const OnBoard({super.key});

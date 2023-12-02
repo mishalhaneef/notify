@@ -1,7 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:notify/core/constants.dart';
-import 'package:notify/view/auth/registration/widgets/choose_avatar.dart';
 import 'package:notify/view/auth/registration/widgets/custom_button.dart';
 import 'package:notify/view/auth/registration/widgets/direct_to_dfrnt_sign_method.dart';
 import 'package:notify/view/onboard/widgets/text_field.dart';
@@ -27,16 +26,16 @@ class LoginScreen extends StatelessWidget {
             children: [
               Row(
                 children: [
-                  IconButton(
-                    onPressed: () => Navigator.pop(context),
-                    icon: const Icon(
-                      CupertinoIcons.back,
-                      color: AppThemeColors.secondaryColor,
-                    ),
-                  ),
+                  // IconButton(
+                  //   onPressed: () => Navigator.pop(context),
+                  //   icon: const Icon(
+                  //     CupertinoIcons.back,
+                  //     color: AppThemeColors.secondaryColor,
+                  //   ),
+                  // ),
                   Consumer<RealTimeTextUpdateProvider>(
                     builder: (context, value, child) => HeadNotifyText(
-                      head: 'Welcome Back ',
+                      head: 'Welcome \nBack :)',
                       secondaryText: value.text,
                       padding: const EdgeInsets.only(
                           left: 10, right: 30, bottom: 30, top: 30),
@@ -66,8 +65,8 @@ class LoginScreen extends StatelessWidget {
                 ],
               ),
               const SizedBox(height: 10),
-              Column(
-                children: const [
+              const Column(
+                children: [
                   CustomButton(),
                   SizedBox(height: 10),
                   DirectToDeferentSignMethod(isLogin: true)

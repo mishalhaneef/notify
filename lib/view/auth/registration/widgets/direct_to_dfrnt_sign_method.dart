@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:notify/core/constants.dart';
+import 'package:notify/core/routes.dart';
+import 'package:notify/view/auth/login/login_screen.dart';
+import 'package:notify/view/auth/registration/registration_screen.dart';
 
 class DirectToDeferentSignMethod extends StatelessWidget {
   const DirectToDeferentSignMethod({
@@ -17,10 +20,16 @@ class DirectToDeferentSignMethod extends StatelessWidget {
           isLogin ? 'New Here? ' : 'already have account? ',
           style: const TextStyle(color: AppThemeColors.hintColor),
         ),
-        Text(
-          isLogin ? 'Register' : 'Login',
-          style:
-              const TextStyle(color: Colors.blue, fontWeight: FontWeight.bold),
+        GestureDetector(
+          onTap: () => isLogin
+              ? Navigator.of(context)
+                  .push(createRoute(const RegistrationScreen()))
+              : Navigator.of(context).push(createRoute(const LoginScreen())),
+          child: Text(
+            isLogin ? 'Register' : 'Login',
+            style: const TextStyle(
+                color: Colors.blue, fontWeight: FontWeight.bold),
+          ),
         )
       ],
     );
